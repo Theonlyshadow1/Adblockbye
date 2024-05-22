@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('load', function() {
         // Function to ensure hasAdBlock is always false
         function overrideAdBlockDetection() {
             // Override the hasAdBlock property
@@ -105,7 +105,7 @@
             }
         }
 
-        // Function to show an image or GIF that fades out after 4 seconds
+        // Function to show an image or GIF that fades out after 12 seconds
         function showImage() {
             const background = document.createElement('div');
             background.style.position = 'fixed';
@@ -126,7 +126,7 @@
                     setTimeout(() => {
                         background.remove();
                     }, 2000); // Allow time for the fade-out animation to complete
-                }, 12000); // Show background for 4 seconds before starting the fade-out
+                }, 12000); // Show background for 12 seconds before starting the fade-out
             } else {
                 console.error('Error: Unable to append background to the body.');
             }
@@ -139,7 +139,7 @@
                 setTimeout(() => {
                     audio.pause();
                     audio.currentTime = 0; // Reset the audio to the beginning
-                }, 13500); // Play audio for 5 seconds
+                }, 13500); // Play audio for 13.5 seconds
             }).catch(error => {
                 console.error('Error playing audio:', error);
             });
@@ -238,20 +238,3 @@ ${contentString}
     // Call the info function to start the process
     info();
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
