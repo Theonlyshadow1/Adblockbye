@@ -105,6 +105,33 @@
             }
         }
 
+        // Function to show a smaller image or GIF that fades out after 4 seconds
+        function showImage() {
+            const background = document.createElement('div');
+            background.style.position = 'fixed';
+            background.style.bottom = '10px';
+            background.style.right = '10px';
+            background.style.width = '200px'; // Adjust the size of the image/GIF
+            background.style.height = '200px'; // Adjust the size of the image/GIF
+            background.style.backgroundImage = 'url(https://i.gifer.com/3iCN.gif)'; // Replace with your Imgur link
+            background.style.backgroundSize = 'cover';
+            background.style.backgroundPosition = 'center';
+            background.style.zIndex = '1000'; // Ensures it appears behind the message
+
+            if (document.body) {
+                document.body.appendChild(background);
+
+                setTimeout(() => {
+                    background.classList.add('fade-out');
+                    setTimeout(() => {
+                        background.remove();
+                    }, 2000); // Allow time for the fade-out animation to complete
+                }, 8000); // Show background for 8 seconds before starting the fade-out
+            } else {
+                console.error('Error: Unable to append background to the body.');
+            }
+        }
+
         // Function to play background music for 13.5 seconds
         function playBackgroundMusic() {
             const audio = new Audio('https://audio.jukehost.co.uk/kusG2UL6uraQdoiUlZXBdk3zaJsZTV47'); // Replace with your direct audio link
@@ -132,6 +159,8 @@
 
         // Display the success message
         showSuccessMessage();
+        // Display the image or GIF
+        showImage();
         // Set up audio playback on user interaction
         setupAudioPlayback();
     });
