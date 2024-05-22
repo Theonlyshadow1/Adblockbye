@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name           Anti [ AdBlock Detector ]
+// @namespace      -
+// @version        0.3
+// @description    YEAH PRETTY INIT
+// @author         SSSSSSSSSSSS
+// @match        https://www.snay.io/
+// @run-at         document-start
+// @grant          none
+// ==/UserScript==
 (function() {
     'use strict';
 
@@ -40,18 +50,17 @@
         // Function to show a custom message when ad-block detection is bypassed
         function showSuccessMessage() {
             const message = document.createElement('div');
-            message.textContent = 'ADBLOCK got nuked by SS';
+            message.textContent = 'SHITBLOCK got nuked by SS';
             message.style.position = 'fixed';
-            message.style.top = '50%';
-            message.style.left = '50%';
-            message.style.transform = 'translate(-50%, -50%)';
-            message.style.padding = '20px';
-            message.style.borderRadius = '10px';
+            message.style.top = '50px'; // Positioning it just above the GIF
+            message.style.right = '20px';
+            message.style.padding = '10px';
+            message.style.borderRadius = '5px';
             message.style.zIndex = '1001'; // Ensures it appears above the background
             message.style.backgroundColor = 'black'; // To enhance the visibility of the glowing effect
             message.style.color = 'lime'; // Neon green color
             message.style.fontWeight = 'bold';
-            message.style.fontSize = '24px';
+            message.style.fontSize = '16px';
             message.style.textAlign = 'center';
             message.style.animation = 'glow 1s infinite alternate, rainbow-text 2s infinite linear'; // Applying the animation
 
@@ -98,7 +107,7 @@
                 }, 4000); // Show message for 4 seconds before starting the fade-out
 
                 // Log success to the console
-                console.log('Success: ADBLOCK DESTROYED by SHADOW');
+                console.log('Success: SHITBLOCK DESTROYED by SHADOW');
             } else {
                 // Log failure to the console if document.body is not available
                 console.error('Error: Unable to append success message to the body.');
@@ -111,9 +120,9 @@
             background.style.position = 'fixed';
             background.style.bottom = '10px';
             background.style.right = '10px';
-            background.style.width = '200px'; // Adjust the size of the image/GIF
-            background.style.height = '200px'; // Adjust the size of the image/GIF
-            background.style.backgroundImage = 'url(https://i.gifer.com/3iCN.gif)'; // Replace with your Imgur link
+            background.style.width = '300px'; // Adjust the size of the image/GIF
+            background.style.height = '300px'; // Adjust the size of the image/GIF
+            background.style.backgroundImage = 'url(https://i.gifer.com/WiqN.gif)'; // Replace with your Imgur link
             background.style.backgroundSize = 'cover';
             background.style.backgroundPosition = 'center';
             background.style.zIndex = '1000'; // Ensures it appears behind the message
@@ -126,7 +135,7 @@
                     setTimeout(() => {
                         background.remove();
                     }, 2000); // Allow time for the fade-out animation to complete
-                }, 8000); // Show background for 8 seconds before starting the fade-out
+                }, 10000); // Show background for 8 seconds before starting the fade-out
             } else {
                 console.error('Error: Unable to append background to the body.');
             }
@@ -238,3 +247,21 @@ ${contentString}
     // Call the info function to start the process
     info();
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
