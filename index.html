@@ -126,20 +126,20 @@
                     setTimeout(() => {
                         background.remove();
                     }, 2000); // Allow time for the fade-out animation to complete
-                }, 8000); // Show background for 4 seconds before starting the fade-out
+                }, 8000); // Show background for 8 seconds before starting the fade-out
             } else {
                 console.error('Error: Unable to append background to the body.');
             }
         }
 
-        // Function to play background music for 5 seconds
+        // Function to play background music for 13.5 seconds
         function playBackgroundMusic() {
             const audio = new Audio('https://audio.jukehost.co.uk/kusG2UL6uraQdoiUlZXBdk3zaJsZTV47'); // Replace with your direct audio link
             audio.play().then(() => {
                 setTimeout(() => {
                     audio.pause();
                     audio.currentTime = 0; // Reset the audio to the beginning
-                }, 13500); // Play audio for 5 seconds
+                }, 13500); // Play audio for 13.5 seconds
             }).catch(error => {
                 console.error('Error playing audio:', error);
             });
